@@ -1,0 +1,720 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    background-color: white;
+}
+
+/* =========================
+   NAVBAR SECTION
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 75px;
+
+    padding: 0 30px;
+
+    background-color: white;
+
+    box-shadow: 0 2px 8px lightgray;
+}
+
+/* =========================
+   BRAND NAME
+========================= */
+
+.navbar h1 {
+    font-size: 32px;
+    animation: pulseLogo 2s infinite;
+}
+
+@keyframes pulseLogo {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.10);
+        color: red;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    list-style: none;
+}
+
+.nav-links a {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 18px;
+
+    transition:
+        transform 1s ease,
+        color 1s ease;
+}
+
+.nav-links a:hover {
+
+    color: darkorange;
+
+    transform: translateY(-5px);
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+
+.search {
+
+    display: flex;
+    align-items: center;
+
+    width: 250px;
+    height: 40px;
+
+    border: 2px solid lightgray;
+    border-radius: 25px;
+
+    overflow: hidden;
+}
+
+.search input {
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    padding-left: 15px;
+}
+
+.search button {
+
+    width: 45px;
+    height: 100%;
+
+    border: none;
+
+    background-color: brown;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* =========================
+   PROFILE / WISHLIST / CART
+========================= */
+
+.nav-info {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.nav-icon {
+    font-size: 22px;
+} 
+
+.nav-items {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+
+.nav-items:hover {
+
+    transform: scale(1.10);
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.home {
+
+    width: 100%;
+    height: 600px;
+
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+/* =========================
+   HOME CONTENT
+========================= */
+
+.home-content {
+
+    margin-left: 12%;
+    width: 420px;
+}
+
+.home-content h1 {
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.home-content h2 {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.home-content p {
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+.home-content button {
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: brown;
+    color: white;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        background-color .3s ease;
+}
+
+.home-content button:hover {
+
+    background-color: black;
+
+    transform: scale(1.05);
+}
+
+/* =========================
+   PRODUCT SECTIONS
+========================= */
+
+.section {
+
+    padding: 33px 40px;
+
+    background-color: whitesmoke;
+}
+
+.section h2 {
+
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 40px;
+}
+
+/* =========================
+   PRODUCT CONTAINER
+========================= */
+
+.products {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card {
+
+    position: relative;
+
+    width: 22%;
+    /* height: 500px; */
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px gray;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-card img {
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+/* =========================
+   WISHLIST
+========================= */
+
+.wishlist {
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    background-color: white;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+.product-card h2 {
+
+    font-size: 20px;
+
+    padding: 15px 15px 8px;
+    margin-bottom: 15px;
+}
+
+.product-card p {
+
+    padding: 0 15px;
+
+    color: gray;
+
+    margin-bottom: 8px;
+}
+
+.product-card h3 {
+
+    padding: 0 15px;
+
+    margin-bottom: 15px;
+
+    color: brown;
+}
+
+/* =========================
+   PRODUCT BUTTONS
+========================= */
+
+.product-buttons {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 0 15px 15px;
+}
+
+.product-buttons button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition:
+        transform .3s ease,
+        background-color .3s ease;
+}
+
+/* =========================
+   ADD TO CART BUTTON
+========================= */
+
+.cart-button {
+
+    background-color: gold;
+
+    color: black;
+}
+
+/* =========================
+   BUY NOW BUTTON
+========================= */
+
+.buy-button {
+
+    background-color: orange;
+
+    color: black;
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 20px lightgray;
+}
+
+.product-card:hover img {
+
+    transform: scale(1.08);
+}
+
+.product-card button:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+   ENQUIRY FORM SECTION
+========================= */
+
+.enquiry {
+
+    padding: 40px;
+
+    background-color: white;
+
+    text-align: center;
+}
+
+.enquiry h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.enquiry p {
+
+    margin-bottom: 30px;
+
+    color: gray;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.enquiry form {
+    width: 70%;
+    margin: auto;
+}
+
+/* =========================
+   FORM ROW
+========================= */
+
+.form-row {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1; /* Divides the available row space equally between the form groups. */
+
+    text-align: left;
+}
+
+.form-group label {
+
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    height: 45px;
+    padding: 0 12px;
+
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.message-group {
+    margin-bottom: 20px;
+}
+
+.message-group textarea {
+    width: 100%;
+    height: 130px;
+    padding: 12px;
+
+    border: 1px solid;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.message-group textarea:focus {
+
+    border: 2px solid brown;
+    outline: none;
+}
+
+/* =========================
+   ENQUIRY BUTTON
+========================= */
+
+.enquiry button {
+
+    padding: 14px 40px;
+    border: none;
+    border-radius: 25px;
+
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.enquiry button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CONTACT US SECTION
+========================= */
+
+.contact-section {
+
+    background-color: black;
+
+    color: white;
+
+    padding: 40px 60px 20px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CONTACT HEADING
+========================= */
+
+.contact-section h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   CONTACT CONTENT
+========================= */
+
+.contact-content {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: flex-start;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ALL CONTACT COLUMNS
+========================= */
+
+.contact-info,
+.quick-links,
+.social-links {
+    width: 30%;
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.contact-info {
+
+    text-align: left;
+}
+
+.contact-info h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+.contact-info p {
+
+    margin-bottom: 10px;
+
+    color: lightgrey;
+}
+
+
+/* =========================
+   QUICK LINKS & SOCIAL LINKS
+========================= */
+
+.quick-links,
+.social-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.quick-links h3,
+.social-links h3 {
+
+    margin-bottom: 5px;
+
+    font-size: 20px;
+}
+
+
+.quick-links a,
+.social-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.quick-links a:hover,
+.social-links a:hover {
+
+    color: gold;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+
+    border-top: 1px solid grey;
+
+    padding-top: 20px;
+
+    color: lightgrey;
+
+    font-size: 14px;
+}

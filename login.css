@@ -1,0 +1,245 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: lightyellow;
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+    height: 690px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+    max-width: 420px;
+    width: 100%;
+    background-color: white;
+
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   BRAND HEADER
+========================= */
+
+.brand-section {
+    background-color: maroon;
+    color: white;
+
+    text-align: center;
+    padding: 20px 25px 20px;
+}
+
+.brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.tagline {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: mistyrose;
+}
+
+
+/* =========================
+   LOGIN CONTENT
+========================= */
+
+.login-content {
+    padding: 25px 30px 20px;
+}
+
+.login-content h2 {
+    font-size: 25px;
+    color: maroon;
+    margin-bottom: 7px;
+}
+
+.login-description {
+    font-size: 15px;
+    color: dimgray;
+    line-height: 1.5;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   FORM FIELDS
+========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 43px;
+    padding: 0 12px;
+
+    border: 1px solid lightgray;
+    border-radius: 6px;
+
+    background-color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border: 1px solid maroon;
+}
+
+
+/* =========================
+   PASSWORD SHOW / HIDE
+========================= */
+
+.password-container {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.password-container:focus-within {
+    border-color: brown;
+}
+
+.password-container input {
+    flex: 1;
+    min-width: 0;
+
+    border: none;
+    border-radius: 0;
+}
+
+.password-container input:focus {
+    border: none;
+}
+
+.toggle-password {
+    height: 41px;
+    padding: 0 12px;
+    border: none;
+    background-color: white;
+
+    color: maroon;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    background-color: antiquewhite;
+}
+
+
+/* =========================
+   VALIDATION MESSAGES
+========================= */
+
+/* white-space: pre-line - Used for line break */
+.error-message {
+    color: red;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 5px;
+    white-space: pre-line;
+}
+
+/* =========================
+   SIGN IN BUTTON
+========================= */
+
+.login-button {
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: maroon;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: red;
+}
+
+
+/* =========================
+   CREATE ACCOUNT
+========================= */
+
+.signup-text {
+    text-align: center;
+    font-size: 13px;
+    color: dimgray;
+
+    margin-top: 20px;
+}
+
+.signup-text a {
+    color: maroon;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-text {
+    text-align: center;
+    color: gray;
+    font-size: 11px;
+    margin-top: 20px;
+}

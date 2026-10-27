@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STYLEHUB - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Brand Header -->
+            <div class="brand-section">
+                <h1 class="brand-name">STYLEHUB</h1>
+                <p class="tagline">YOUR STYLE, YOUR CHOICE</p>
+            </div>
+
+            <!-- Login Content -->
+            <div class="login-content">
+                <h2>Welcome Back</h2>
+                <p class="login-description"> Sign in to continue your style journey.</p>
+
+                <!-- Novalidate eliminates in-built validation-->
+                <form id="loginForm" novalidate>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <!-- autocomplete helps the browser find and autofill previously saved login details,
+                        such as username/email and current password. -->
+                        <input type="email" id="email" placeholder="Enter your email address"
+                        name="email" autocomplete="username" required>
+
+                        <p class="error-message" id="emailError"></p>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="password-container">
+
+                            <input type="password" id="password" placeholder="Enter your password"
+                            name="password" autocomplete="current-password" required>
+
+                            <button type="button" id="togglePassword" class="toggle-password">
+                                Show
+                            </button>
+                        </div>
+
+                        <p class="error-message" id="passwordError"></p>
+                    </div>
+
+                    <!-- Sign In -->
+                    <button type="submit" class="login-button">
+                        SIGN IN
+                    </button>
+                </form>
+
+                <!-- Create Account -->
+                <p class="signup-text">
+                    New to STYLEHUB?
+                    <a href="#" id="signupLink">Create an account</a>
+                </p>
+
+                <!-- Copyright -->
+                <p class="footer-text">
+                    © 2026 STYLEHUB. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

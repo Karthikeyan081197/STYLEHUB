@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: white;
 }
 
@@ -154,6 +154,76 @@ body {
 .nav-items:hover {
     transform: scale(1.10);
 }
+
+
+/* PROFILE DROPDOWN */
+.profile-container {
+    position: relative;
+}
+
+#profileButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    background-color: white;
+    z-index: 10;
+}
+
+.profile-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+    background-color: whitesmoke;
+}
+
+
+/* =========================
+   NAVIGATION COUNT BADGES
+========================= */
+
+.nav-icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-count {
+    position: absolute;
+    top: -5px;
+    right: -9px;
+
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+
+    background-color: maroon;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* =========================
    HOME SECTION
@@ -627,4 +697,47 @@ body {
 
     color: lightgrey;
     font-size: 14px;
+}
+
+
+
+
+/* PROFILE DROPDOWN */
+
+.profile-container {
+    position: relative;
+}
+
+#profileButton {
+    padding: 8px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 2px 8px gray;
+    z-index: 10;
+}
+
+.profile-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+    background-color: whitesmoke;
 }
